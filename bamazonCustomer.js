@@ -26,7 +26,6 @@ connection.connect(function(err) {
         if(err) throw err;
         let titles = ["item_id","product_name","department_name","price","stock"];
         table.push(titles);
-        console.log(response[1]);
         
         for(let i =0;i<response.length;i++){
             var newRow = [];
@@ -42,6 +41,8 @@ connection.connect(function(err) {
         inquirer.prompt([
             {
                 name: "action",
+                type: list,
+                choices:[]
                 
             }
         ])
